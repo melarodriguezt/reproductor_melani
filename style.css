@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Helvetica';
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
+
+.playlist-folder {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.songs-list {
+    list-style: none;
+    padding-left: 20px;
+    display: none; /* Ocultamos las canciones por defecto */
+}
+
+.playlist-folder:hover .songs-list {
+    display: block; /* Muestra las canciones al pasar el ratón por encima de la carpeta */
+}
+
+.songs-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.songs-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.songs-list li.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#playlist-container {
+    width: 200px;
+    float: left; /* Hace que la lista se alinee a la izquierda del reproductor */
+    padding: 10px;
+    border-right: 1px solid #f6a8a8;
+    margin-right: 20px;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#playlist li:hover {
+    background-color: #ff9191;
+}
+
+#playlist li.active {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#player {
+    width: 421px;
+    height: 500px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 7px solid hwb(0 39% 0%);
+}
+
+.cover {
+    width: 420px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 450px;
+    height: 115px;
+    background-color: #d98484;
+}
+
+.cont {
+    text-align: center;
+    padding-top: 45px;
+}
+
+.trackinfo {
+    position: inherit;
+    bottom: 125px;
+    color: #ffffff;
+}
+
+.trackinfo p {
+    text-shadow: 0px 0px 10px #f39393;
+}
+
+#title {
+    font-weight: lighter;
+    font-size: 45px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+#artist {
+    padding-left: 20px;
+}
+
+#track {
+    width: 390px;
+    height: 7px;
+    position: absolute;
+    background-color: #ffffff;
+    bottom: 100px;
+    left: 19px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#progress {
+    float: left;
+    height: 5px;
+    width: 0%;
+    background: #000000;
+    cursor: pointer;
+}
+
+#handler {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: hwb(0 39% 0%);
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.nav {
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #ffffff;
+    border: 3px solid hwb(0 39% 0%);
+    border-radius: 50%;
+    outline: none;
+    margin: 0 29px;
+    cursor: pointer;
+}
+
+.nav:hover {
+    background-color: #f8a191;
+}
+
+.nav img {
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 30PX;
+}
+
+.pad {
+    padding-left: 5px;
+}
+
+#prev {
+    padding-right: 5px;
+}
+
+#next {
+    padding-left: 4px;
+}
